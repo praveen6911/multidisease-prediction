@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parkinson Prediction</title>
+</head>
+<body>
+    <h1>Parkinson Prediction Form</h1>
+    <form action="/predict_parkinson" method="post">
+        <label for="MDVP:Fo(Hz)">MDVP:Fo(Hz):</label><input type="number" name="MDVP:Fo(Hz)" step="any"><br>
+        <label for="MDVP:Fhi(Hz)">MDVP:Fhi(Hz):</label><input type="number" name="MDVP:Fhi(Hz)" step="any"><br>
+        <label for="MDVP:Flo(Hz)">MDVP:Flo(Hz):</label><input type="number" name="MDVP:Flo(Hz)" step="any"><br>
+        <label for="MDVP:Jitter(%)">MDVP:Jitter(%):</label><input type="number" name="MDVP:Jitter(%)" step="any"><br>
+        <label for="MDVP:Jitter(Abs)">MDVP:Jitter(Abs):</label><input type="number" name="MDVP:Jitter(Abs)" step="any"><br>
+        <label for="MDVP:RAP">MDVP:RAP:</label><input type="number" name="MDVP:RAP" step="any"><br>
+        <label for="MDVP:PPQ">MDVP:PPQ:</label><input type="number" name="MDVP:PPQ" step="any"><br>
+        <label for="Jitter:DDP">Jitter:DDP:</label><input type="number" name="Jitter:DDP" step="any"><br>
+        <label for="MDVP:Shimmer">MDVP:Shimmer:</label><input type="number" name="MDVP:Shimmer" step="any"><br>
+        <label for="MDVP:Shimmer(dB)">MDVP:Shimmer(dB):</label><input type="number" name="MDVP:Shimmer(dB)" step="any"><br>
+        <label for="Shimmer:APQ3">Shimmer:APQ3:</label><input type="number" name="Shimmer:APQ3" step="any"><br>
+        <label for="Shimmer:APQ5">Shimmer:APQ5:</label><input type="number" name="Shimmer:APQ5" step="any"><br>
+        <label for="MDVP:APQ">MDVP:APQ:</label><input type="number" name="MDVP:APQ" step="any"><br>
+        <label for="Shimmer:DDA">Shimmer:DDA:</label><input type="number" name="Shimmer:DDA" step="any"><br>
+        <label for="NHR">NHR:</label><input type="number" name="NHR" step="any"><br>
+        <label for="HNR">HNR:</label><input type="number" name="HNR" step="any"><br>
+        <label for="RPDE">RPDE:</label><input type="number" name="RPDE" step="any"><br>
+        <label for="DFA">DFA:</label><input type="number" name="DFA" step="any"><br>
+        <label for="spread1">spread1:</label><input type="number" name="spread1" step="any"><br>
+        <label for="spread2">spread2:</label><input type="number" name="spread2" step="any"><br>
+        <label for="D2">D2:</label><input type="number" name="D2" step="any"><br>
+        <label for="PPE">PPE:</label><input type="number" name="PPE" step="any"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>

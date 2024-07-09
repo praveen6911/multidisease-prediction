@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <h1>Heart Disease Prediction Form</h1>
+    <form action="/predict_heart_disease" method="post">
+        <label for="age">Age:</label><input type="number" name="age" step="any"><br>
+        <label for="sex">Sex:</label><input type="number" name="sex" step="any"><br>
+        <label for="cp">CP:</label><input type="number" name="cp" step="any"><br>
+        <label for="trestbps">Resting Blood Pressure:</label><input type="number" name="trestbps" step="any"><br>
+        <label for="chol">Cholesterol:</label><input type="number" name="chol" step="any"><br>
+        <label for="fbs">Fasting Blood Sugar:</label><input type="number" name="fbs" step="any"><br>
+        <label for="restecg">Resting ECG:</label><input type="number" name="restecg" step="any"><br>
+        <label for="thalach">Maximum Heart Rate:</label><input type="number" name="thalach" step="any"><br>
+        <label for="exang">Exercise Induced Angina:</label><input type="number" name="exang" step="any"><br>
+        <label for="oldpeak">Oldpeak:</label><input type="number" name="oldpeak" step="any"><br>
+        <label for="slope">Slope:</label><input type="number" name="slope" step="any"><br>
+        <label for="ca">CA:</label><input type="number" name="ca" step="any"><br>
+        <label for="thal">Thal:</label><input type="number" name="thal" step="any"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
